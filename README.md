@@ -97,5 +97,5 @@ Visualization results of twelve state-of-the-art methods and RoSPER-Net for diff
 
 ## 🎫 License
 
-The content of this project itself is licensed under [LICENSE](https://github.com/ILoveESWA/RoMERUNet/blob/main/LICENSE).
+The content of this project itself is licensed under [LICENSE](https://github.com/ILoveICCV/RoMER-UNet/blob/main/LICENSE).
 
