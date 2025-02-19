@@ -53,12 +53,12 @@ pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs 
 
 ### 2. Prepare Datasets
 
-- Download datasets: ISIC2017 from this [link](https://challenge.isic-archive.com/data/#2017), ISIC2018 from this [link](https://challenge.isic-archive.com/data/#2018), and PH2 from this [link](https://www.dropbox.com/scl/fi/epzcoqeyr1v9qlv/PH2Dataset.rar?rlkey=6mt2jlvwfkditkyg12xdei6ux&e=1), Kvasir from this[link](https://link.zhihu.com/?target=https%3A//datasets.simula.no/downloads/kvasir-seg.zip), BUSI from this [link](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset), CVC-ClinkDB from this [link](https://www.kaggle.com/datasets/balraj98/cvcclinicdb?resource=download), Moun-Seg from this [link](https://www.kaggle.com/datasets/tuanledinh/monuseg2018), and COVID-19 from this [link](https://drive.usercontent.google.com/download?id=1FHx0Cqkq9iYjEMN3Ldm9FnZ4Vr1u3p-j&export=download&authuser=0).
+- Download datasets: ISIC2018 from this [link](https://challenge.isic-archive.com/data/#2018), and PH2 from this [link](https://www.dropbox.com/scl/fi/epzcoqeyr1v9qlv/PH2Dataset.rar?rlkey=6mt2jlvwfkditkyg12xdei6ux&e=1), Kvasir from this[link](https://link.zhihu.com/?target=https%3A//datasets.simula.no/downloads/kvasir-seg.zip), BUSI from this [link](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset), CVC-ClinkDB from this [link](https://www.kaggle.com/datasets/balraj98/cvcclinicdb?resource=download), Moun-Seg from this [link](https://www.kaggle.com/datasets/tuanledinh/monuseg2018), and COVID-19 from this [link](https://drive.usercontent.google.com/download?id=1FHx0Cqkq9iYjEMN3Ldm9FnZ4Vr1u3p-j&export=download&authuser=0).
 
 
 - Folder organization: put datasets into ./data/datasets folder.
 
-### 3. Train the RoSPER-Net
+### 3. Train the RoMER-UNet
 
 ```
 python train.py --datasets ISIC2018
@@ -67,7 +67,7 @@ pre-training file is saved to ./checkpoints/ISIC2018/best.pth
 concrete information see train.py, please
 ```
 
-### 3. Test the RoSPER-Net
+### 3. Test the RoMER-UNet
 
 ```
 python test.py --datasets ISIC2018
@@ -83,7 +83,7 @@ concrete information see test.py, please
 <img width="800" alt="image" src="asserts/Visualization.png?raw=true">
 </div>
 
-Visualization results of twelve state-of-the-art methods and RoSPER-Net for different lesions. The red circles indicate areas of incorrect predictions.
+Visualization results of twelve state-of-the-art methods and RoMER-UNet for different lesions. The red circles indicate areas of incorrect predictions.
 
 ## ✨ Quantitative comparison
 
