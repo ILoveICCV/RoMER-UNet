@@ -1,6 +1,6 @@
-conda create -n RoMERUNet python=3.8
+conda create -n RoMERUNet python=3.10
 conda activate RoMERUNet
-pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install packaging
 pip install timm==0.4.12
 pip install pytest chardet yacs termcolor
