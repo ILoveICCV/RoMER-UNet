@@ -17,7 +17,7 @@ Evaluation results on seven public datasets indicate that RoMER-UNet outperforms
 ## 🚀 Introduction
 
 <div align="center">
-    <img width="400" alt="image" src="asserts/challenges.png?raw=true">
+    <img width="400" alt="image" src="asserts/challenge.png?raw=true">
 </div>
 
 The challenges: Medical images of different pathologies exhibit significant differences, with the complex edges and noise interference.
