@@ -40,14 +40,14 @@ Illustration of the overall architecture of RoMER-UNet. (I) EPFM is Edge-Prompt 
 ### 1. Install Environment
 
 ```
-conda create -n RoMERUNet python=3.8
+conda create -n RoMERUNet python=3.10
 conda activate RoMERUNet
-pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install packaging
-pip install timm==0.4.12
+pip install timm
 pip install pytest chardet yacs termcolor
 pip install submitit tensorboardX
-pip install triton==2.0.0
+pip install triton
 pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs PyWavelets
 ```
 
