@@ -61,7 +61,7 @@ pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs 
 ### 3. Train the RoMER-UNet
 
 ```
-python train.py
+python train.py --datasets ISIC2018
 training records is saved to ./log folder
 pre-training file is saved to ./checkpoints/ISIC2018/best.pth
 concrete information see train.py, please
@@ -70,7 +70,7 @@ concrete information see train.py, please
 ### 3. Test the RoMER-UNet
 
 ```
-python test.py
+python test.py --datasets ISIC2018
 testing records is saved to ./log folder
 testing results are saved to ./Test/ISIC2018/images folder
 concrete information see test.py, please
