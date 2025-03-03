@@ -1,5 +1,5 @@
 <div align="center">
-<h1> RoMER-UNet: Robust Medical Image Segmentation with Multi-frequency Edge Refinement and Prompt-guided Attention </h1>
+<h1> RoMERPA-UNet: Robust Medical Image Segmentation with Multi-frequency Edge Refinement and Prompt-guided Attention </h1>
 </div>
 
 ## 🎈 News
@@ -8,11 +8,11 @@
 
 ## ⭐ Abstract
 
-Medical image segmentation faces numerous challenges, particularly in exploring multi-scale and multi-frequency information for effective edge detection and noise suppression. Additionally, enhancing the model's adaptability and generalization ability in diverse pathological images is an urgent issue that needs to be addressed. 
-To this end, we propose RoMER-UNet and introduce a key module—the Edge-Prompt Fusion Module (EPFM), which consists of the Edge Detection Module (EDM) and the Global Context Modulation Module (GCM). 
-The EDM enhances feature maps through multi-scale convolutions and separates multi-frequency information. High-frequency components are utilized to capture boundary information, while low-frequency components help suppress noise. Meanwhile, by combining multi-directional with fine-grained global-local offsets, the model's adaptability to irregular edges is optimized.
-The GCM improves generalization by generating high-frequency and low-frequency prompt masks and combining them with prompt-guided cross-attention to extract transferable segmentation features applicable to various medical cases, thereby improving generalization.
-Evaluation results on seven public datasets indicate that RoMER-UNet outperforms twelve existing advanced methods in segmentation accuracy.
+Medical image segmentation faces numerous challenges, particularly in exploring multi-scale and multi-frequency features for effective edge detection and noise suppression. Plus, enhancing the model's adaptability and generalization ability in diverse pathological images is an urgent issue. 
+To address problems, we propose RoMERPA-UNet, which incorporates two key modules: the Edge Detection Block (EDB) and the Hybrid Prompt Block (HPB). 
+The EDB enhances feature maps via multi-scale convolutions and separates multi-frequency information. High-frequency components are used to capture boundaries of salient objects, while low-frequency components help suppress noise introduced by non-salient objects. Meanwhile, by combining multi-directional with fine-grained global-local offsets, the model's adaptability to irregular edges is optimized. 
+The HPB improves generalization performance by generating high-frequency and low-frequency prompt masks and combining them with prompt-guided cross-attention to extract transferable segmentation features applicable to various medical cases. 
+Evaluation results on seven public datasets indicate that RoMERPA-UNet outperforms eleven existing advanced methods in segmentation accuracy. 
 
 ## 🚀 Introduction
 
@@ -28,7 +28,7 @@ The challenges: Medical images of different pathologies exhibit significant diff
 <img width="800" alt="image" src="asserts/network.png?raw=true">
 </div>
 
-Illustration of the overall architecture of RoMER-UNet. (I) EPFM is Edge-Prompt Fusion Module, (II) EDM is Edge Detection Module, (III) GCM is Global Context Modulation Module. (II.a) MSFA is Multi-scale Feature Aggressiveness, (II.b) MFFE is Multi-frequency Feature Extraction, (II.c) CFR is Contour Feature Refinement, and (III.a) PGC is Prompt-guided Cross-attention.
+Illustration of the overall architecture of RoMERPA-UNet. (I) EPFM is Edge-Prompt Fusion Module, (II) EDB is Edge Detection Block, (III) HPB is Hybrid Prompt Block, (II.a) MSFA is Multi-scale Feature Aggressiveness, (II.b) MFFE is Multi-frequency Feature Extraction, (II.c) CFR is Contour Feature Refinement, and (III.a) PGC is Prompt-guided Cross-attention.
 
 
 ## 📆 TODO
@@ -40,8 +40,8 @@ Illustration of the overall architecture of RoMER-UNet. (I) EPFM is Edge-Prompt 
 ### 1. Install Environment
 
 ```
-conda create -n RoMERUNet python=3.10
-conda activate RoMERUNet
+conda create -n RoMERPAUNet python=3.10
+conda activate RoMERPAUNet
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install packaging
 pip install timm
@@ -58,7 +58,7 @@ pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs 
 
 - Folder organization: put datasets into ./data/datasets folder.
 
-### 3. Train the RoMER-UNet
+### 3. Train the RoMERPA-UNet
 
 ```
 python train.py --datasets ISIC2018
@@ -67,7 +67,7 @@ pre-training file is saved to ./checkpoints/ISIC2018/best.pth
 concrete information see train.py, please
 ```
 
-### 3. Test the RoMER-UNet
+### 3. Test the RoMERPA-UNet
 
 ```
 python test.py --datasets ISIC2018
@@ -83,7 +83,7 @@ concrete information see test.py, please
 <img width="800" alt="image" src="asserts/Visualization.png?raw=true">
 </div>
 
-Visualization results of twelve state-of-the-art methods and RoMER-UNet for different lesions. The red circles indicate areas of incorrect predictions.
+Visualization results of twelve state-of-the-art methods and RoMERPA-UNet for different lesions. The red circles indicate areas of incorrect predictions.
 
 ## ✨ Quantitative comparison
 
