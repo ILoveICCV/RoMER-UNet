@@ -97,5 +97,4 @@ Visualization results of twelve state-of-the-art methods and RoMERPA-UNet for di
 
 ## 🎫 License
 
-The content of this project itself is licensed under [LICENSE](https://github.com/ILoveESWA/RoMERUNet/blob/main/LICENSE).
-
+The content of this project itself is licensed under [LICENSE](https://github.com/ILoveICCV/RoMERPA-UNet/blob/main/LICENSE).
