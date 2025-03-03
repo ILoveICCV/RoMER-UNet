@@ -80,14 +80,14 @@ concrete information see test.py, please
 ## ✨ Quantitative comparison
 
 <div align="center">
-<img width="800" alt="image" src="asserts/compara.png?raw=true">
+<img width="800" alt="image" src="asserts/compara_.png?raw=true">
 </div>
 
 
 ## 🖼️ Visualization
 
 <div align="center">
-<img width="800" alt="image" src="asserts/Visualization.png?raw=true">
+<img width="800" alt="image" src="asserts/Visualization_.png?raw=true">
 </div>
 
 Visualization results of twelve state-of-the-art methods and RoMERPA-UNet for different lesions. The red circles indicate areas of incorrect predictions.
