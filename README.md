@@ -77,6 +77,13 @@ concrete information see test.py, please
 ```
 
 
+## ✨ Quantitative comparison
+
+<div align="center">
+<img width="800" alt="image" src="asserts/compara.png?raw=true">
+</div>
+
+
 ## 🖼️ Visualization
 
 <div align="center">
@@ -85,11 +92,6 @@ concrete information see test.py, please
 
 Visualization results of twelve state-of-the-art methods and RoMERPA-UNet for different lesions. The red circles indicate areas of incorrect predictions.
 
-## ✨ Quantitative comparison
-
-<div align="center">
-<img width="800" alt="image" src="asserts/compara.png?raw=true">
-</div>
 
 <div align="center">
     We compare our method against twelve state-of-the-art methods, evaluating segmentation performance on the ISIC2018, Kvasir, Monu-Seg, COVID-19, and BUSI datasets, and assessing generalization on the PH2 and CVC-ClinkDB datasets.
