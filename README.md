@@ -83,6 +83,10 @@ concrete information see test.py, please
 <img width="800" alt="image" src="asserts/compara_.png?raw=true">
 </div>
 
+<div align="center">
+    We compare our method against twelve state-of-the-art methods, evaluating segmentation performance on the ISIC2018, Kvasir, Monu-Seg, COVID-19, and BUSI datasets, and assessing generalization on the PH2 and CVC-ClinkDB datasets.
+</div>
+
 
 ## 🖼️ Visualization
 
@@ -90,11 +94,8 @@ concrete information see test.py, please
 <img width="800" alt="image" src="asserts/Visualization_.png?raw=true">
 </div>
 
-Visualization results of twelve state-of-the-art methods and RoMERPA-UNet for different lesions. The red circles indicate areas of incorrect predictions.
-
-
 <div align="center">
-    We compare our method against twelve state-of-the-art methods, evaluating segmentation performance on the ISIC2018, Kvasir, Monu-Seg, COVID-19, and BUSI datasets, and assessing generalization on the PH2 and CVC-ClinkDB datasets.
+    Visualization results of twelve state-of-the-art methods and RoMERPA-UNet for different lesions. The red circles indicate areas of incorrect predictions.
 </div>
 
 ## 🎫 License
