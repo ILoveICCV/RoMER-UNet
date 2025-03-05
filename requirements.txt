@@ -1,9 +1,9 @@
-conda create -n RoMERUNet python=3.10
-conda activate RoMERUNet
+conda create -n RoMERPAUNet python=3.10
+conda activate RoMERPAUNet
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install packaging
-pip install timm==0.4.12
+pip install timm
 pip install pytest chardet yacs termcolor
 pip install submitit tensorboardX
-pip install triton==2.0.0
+pip install triton
 pip install scikit-learn matplotlib thop h5py SimpleITK scikit-image medpy yacs PyWavelets
