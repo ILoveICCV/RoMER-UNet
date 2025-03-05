@@ -9,8 +9,8 @@
 ## ⭐ Abstract
 
 Medical image segmentation faces numerous challenges, particularly in exploring multi-scale and multi-frequency features for effective edge detection and noise suppression. Plus, enhancing the model's adaptability and generalization ability in diverse pathological images is an urgent issue. 
-To address problems, we propose RoMERPA-UNet, which incorporates two key modules: the Edge Detection Block (EDB) and the Hybrid Prompt Block (HPB). 
-The EDB enhances feature maps via multi-scale convolutions and separates multi-frequency information. High-frequency components are used to capture boundaries of salient objects, while low-frequency components help suppress noise introduced by non-salient objects. Meanwhile, by combining multi-directional with fine-grained global-local offsets, the model's adaptability to irregular edges is optimized. 
+To address problems, we propose RoMERPA-UNet, which incorporates two key blocks: the Edge Detection Block (EDB) and the Hybrid Prompt Block (HPB). 
+The EDB uses multi-scale convolutions to enhance feature maps, and further separates multi-frequency information. High-frequency components are used to capture boundaries of salient objects, while low-frequency components help suppress noise introduced by non-salient objects. Meanwhile, by combining multi-directional with fine-grained global-local offsets, the model's adaptability to irregular edges is optimized. 
 The HPB improves generalization performance by generating high-frequency and low-frequency prompt masks and combining them with prompt-guided cross-attention to extract transferable segmentation features applicable to various medical cases. 
 Evaluation results on seven public datasets indicate that RoMERPA-UNet outperforms eleven existing advanced methods in segmentation accuracy. 
 
