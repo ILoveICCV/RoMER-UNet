@@ -4,7 +4,7 @@ import os
 import numpy as np
 from PIL import Image
 
-TEST,TRAIN = 1,2
+from mirco import TEST,TRAIN
 class ISIC2018_Datasets(Dataset):
     def __init__(self,mode,transformer):
         super().__init__()
