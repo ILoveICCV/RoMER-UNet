@@ -1,7 +1,7 @@
 import sys
 import os
 
-TEST,TRAIN = 1,2
+from mirco import TEST,TRAIN
 
 sys.path.append(os.getcwd())
 
