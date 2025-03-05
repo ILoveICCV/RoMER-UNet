@@ -3,6 +3,7 @@ from torch.utils.data import Dataset
 import os
 import numpy as np
 from PIL import Image
+import tifffile as tiff
 
 from mirco import TEST,TRAIN
 class ISIC2018_Datasets(Dataset):
@@ -290,7 +291,6 @@ class CVC_ClinkDB_Datasets(Dataset):
         return len(self.data)
 
 
-import tifffile as tiff
 class Monu_Seg_Datasets(Dataset):
     def __init__(self,mode,transformer):
         super().__init__()
