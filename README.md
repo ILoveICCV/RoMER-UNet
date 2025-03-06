@@ -28,7 +28,7 @@ The challenges: Medical images of different pathologies exhibit significant diff
 <img width="800" alt="image" src="asserts/network.png?raw=true">
 </div>
 
-Illustration of the overall architecture of RoMERPA-UNet. (I) EPFM is Edge-Prompt Fusion Module, (II) EDB is Edge Detection Block, (III) HPB is Hybrid Prompt Block, (II.a) MSFA is Multi-scale Feature Aggressiveness, (II.b) MFFE is Multi-frequency Feature Extraction, (II.c) CFR is Contour Feature Refinement, and (III.a) PGC is Prompt-guided Cross-attention.
+Illustration of the overall architecture of RoMERPA-UNet. (I) EPFM is Edge-Prompt Fusion Module, (II) EDB is Edge Detection Block, (III) HPB is Hybrid Prompt Block, (II.a) MFA is Multi-scale Feature Aggressiveness, (II.b) MFE is Multi-frequency Feature Extraction, (II.c) CFR is Contour Feature Refinement, and (III.a) PGC is Prompt-guided Cross-attention.
 
 
 ## 📆 TODO
