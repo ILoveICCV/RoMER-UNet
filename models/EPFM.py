@@ -1,14 +1,14 @@
 import torch
 from torch import nn
-from models.EDM import EDM
-from models.GCM import GCM
+from models.EDB import EDB
+from models.HPB import HPB
 
 class EPFM(nn.Module):
     def __init__(self, in_channels,out_channels,sample,up=True,kernel_list=[3,9]):
         super().__init__()
         
-        self.edm=EDM(in_channels,kernel_list=kernel_list)
-        self.gcm=GCM(in_channels)
+        self.edb=EDB(in_channels,kernel_list=kernel_list)
+        self.hpb=HPB(in_channels)
         self.mlp=nn.Sequential(
                 nn.BatchNorm2d(in_channels*2),
                 nn.Conv2d(in_channels*2,out_channels,1),
@@ -25,9 +25,9 @@ class EPFM(nn.Module):
             self.sample=None
 
     def forward(self,x):
-        x_edm=self.edm(x)
-        x_gcm=self.gcm(x)
-        x_cat=torch.cat([x_edm,x_gcm],dim=1)
+        x_edb=self.edb(x)
+        x_hpb=self.hpb(x)
+        x_cat=torch.cat([x_edb,x_hpb],dim=1)
         x=self.mlp(x_cat)
         if self.sample!=None:
             x=self.sample(x)
