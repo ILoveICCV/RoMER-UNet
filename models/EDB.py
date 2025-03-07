@@ -59,7 +59,7 @@ class MFA(nn.Module):
 
 
 
-class EDM(nn.Module):
+class EDB(nn.Module):
     def __init__(self,in_channels=3,kernel_list=[3,9]):
         super().__init__()
         '''
@@ -67,13 +67,13 @@ class EDM(nn.Module):
         DWT: multi-frequency features
         CRB: learning deform
         '''
-        self.msfa=MFA(in_channels,kernel_list=kernel_list)
+        self.mfa=MFA(in_channels,kernel_list=kernel_list)
         self.dwt=DWT(in_channels)
         self.cfr=CFR(in_channels)
 
 
     def forward(self,x):
-        x=self.msfa(x)
+        x=self.mfa(x)
         x=self.dwt(x)
         x=self.cfr(x)
         return x
