@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch
 
 
-class GCM(nn.Module):
+class HPB(nn.Module):
     def __init__(self,input_channels=3):
         super().__init__()
         #PGC
