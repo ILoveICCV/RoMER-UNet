@@ -70,12 +70,16 @@ class DWT(nn.Module):
         self.mode = mode
         self.conv=nn.Conv2d(in_channels,in_channels,1)
         self.sig=nn.Sigmoid()
+        #self.fus_g=nn.Sequential(
+            #nn.Linear(in_channels,in_channels),
+            #nn.GELU(),
+            #nn.Linear(in_channels,in_channels)
+        #)
         self.fus=nn.Sequential(
             nn.Conv2d(in_channels,in_channels,3,padding=1,groups=in_channels),
             nn.GELU(),
             nn.Conv2d(in_channels,in_channels,1)
         )
-    
     def forward(self, x):
         b, c, h, w = x.shape
         l_component = x
@@ -90,16 +94,14 @@ class DWT(nn.Module):
         component, lh_component, hl_component, hh_component = res.split(1, 2)
         component, lh_component, hl_component, hh_component = component.squeeze(2),lh_component.squeeze(2), hl_component.squeeze(2), hh_component.squeeze(2)
         component=self.sample(component)
-    
         #high-frequency information
         h_component=lh_component + hl_component + hh_component
         h_component=self.conv(h_component)
         h_component=self.sample(h_component)
         x_1=self.sig(h_component)*x
-
         #low-frequency information
         x_2=self.sig(x-l_component)*x
-        
         x=x_1+x_2
+        #x=self.fus_g(x.permute(0,2,3,1).contiguous().view(b,h*w,c)).contiguous().view(b,c,h,w)
         x=self.fus(x)
         return x
